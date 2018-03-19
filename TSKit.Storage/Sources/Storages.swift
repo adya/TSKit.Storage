@@ -1,4 +1,3 @@
-
 /// Provides access to predefined storages.
 public enum Storages {
     

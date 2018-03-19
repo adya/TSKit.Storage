@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006182D920604AEB0079DD8C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 006182D820604AEB0079DD8C /* Cartfile */; };
+		006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006182DA20604BEA0079DD8C /* TSKit_Core.framework */; };
 		00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */; };
 		00C2C3A81FE330F200721731 /* TSKit_StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3A71FE330F200721731 /* TSKit_StorageTests.swift */; };
 		00C2C3AA1FE330F200721731 /* TSKit_Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C2C39C1FE330F200721731 /* TSKit_Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,7 +28,6 @@
 		00C2C3CC1FE331EA00721731 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3BB1FE331EA00721731 /* UserDefaultsStorage.swift */; };
 		00C2C3CD1FE331EA00721731 /* DictionaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */; };
 		00C2C3CE1FE331EA00721731 /* DictionaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */; };
-		00C2C3D01FE3323400721731 /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3D11FE3323400721731 /* TSKit_Core.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006182D820604AEB0079DD8C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		006182DA20604BEA0079DD8C /* TSKit_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TSKit_Core.framework; path = Carthage/Build/iOS/TSKit_Core.framework; sourceTree = "<group>"; };
 		00C2C3991FE330F200721731 /* TSKit_Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSKit_Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C2C39C1FE330F200721731 /* TSKit_Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSKit_Storage.h; sourceTree = "<group>"; };
 		00C2C39D1FE330F200721731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		00C2C3BA1FE331EA00721731 /* UbiquitousStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbiquitousStorage.swift; sourceTree = "<group>"; };
 		00C2C3BB1FE331EA00721731 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryStorage.swift; sourceTree = "<group>"; };
-		00C2C3D11FE3323400721731 /* TSKit_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TSKit_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C2C3D01FE3323400721731 /* TSKit_Core.framework in Frameworks */,
+				006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				00C2C3B31FE331D500721731 /* Sources */,
+				006182D820604AEB0079DD8C /* Cartfile */,
 				00C2C39C1FE330F200721731 /* TSKit_Storage.h */,
 				00C2C39D1FE330F200721731 /* Info.plist */,
 			);
@@ -133,7 +136,7 @@
 		00C2C3CF1FE3323400721731 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00C2C3D11FE3323400721731 /* TSKit_Core.framework */,
+				006182DA20604BEA0079DD8C /* TSKit_Core.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006182D920604AEB0079DD8C /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +432,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = TSKit.Storage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -452,6 +457,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = TSKit.Storage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

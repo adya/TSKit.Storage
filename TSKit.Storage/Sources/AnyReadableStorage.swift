@@ -2,7 +2,7 @@
  Represents a common way to read values in storages of any kind.
  
  - Version: 1.0
- - Since:    04/07/2017
+ - Since:   04/07/2017
  - Author:  AdYa
  */
 public protocol AnyReadableStorage : class {
