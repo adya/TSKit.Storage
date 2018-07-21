@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		006182D920604AEB0079DD8C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 006182D820604AEB0079DD8C /* Cartfile */; };
 		006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006182DA20604BEA0079DD8C /* TSKit_Core.framework */; };
+		00A0522C2102144500A2D648 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A0522B2102144500A2D648 /* StorageContainer.swift */; };
 		00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */; };
 		00C2C3A81FE330F200721731 /* TSKit_StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3A71FE330F200721731 /* TSKit_StorageTests.swift */; };
 		00C2C3AA1FE330F200721731 /* TSKit_Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C2C39C1FE330F200721731 /* TSKit_Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +43,7 @@
 /* Begin PBXFileReference section */
 		006182D820604AEB0079DD8C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		006182DA20604BEA0079DD8C /* TSKit_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TSKit_Core.framework; path = Carthage/Build/iOS/TSKit_Core.framework; sourceTree = "<group>"; };
+		00A0522B2102144500A2D648 /* StorageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageContainer.swift; sourceTree = "<group>"; };
 		00C2C3991FE330F200721731 /* TSKit_Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSKit_Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C2C39C1FE330F200721731 /* TSKit_Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSKit_Storage.h; sourceTree = "<group>"; };
 		00C2C39D1FE330F200721731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				00C2C3B81FE331EA00721731 /* Storages.swift */,
+				00A0522B2102144500A2D648 /* StorageContainer.swift */,
 				00C2C3B41FE331EA00721731 /* AnyReadableStorage.swift */,
 				00C2C3B61FE331EA00721731 /* AnyStorage.swift */,
 				00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */,
@@ -236,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006182D920604AEB0079DD8C /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +279,7 @@
 				00C2C3BF1FE331EA00721731 /* PlistStorage.swift in Sources */,
 				00C2C3C11FE331EA00721731 /* AnyStorage.swift in Sources */,
 				00C2C3BD1FE331EA00721731 /* AnyReadableStorage.swift in Sources */,
+				00A0522C2102144500A2D648 /* StorageContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
