@@ -1,3 +1,8 @@
+/// - Since: 01/21/2018
+/// - Author: Arkadii Hlushchevskyi
+/// - Copyright: © 2018. Arkadii Hlushchevskyi.
+/// - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
+
 /**
  Represents a common way to access (read/write) values in storages of any kind.
  
