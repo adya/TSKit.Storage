@@ -1,16 +1,16 @@
 /// - Since: 01/21/2018
-/// - Author: Arkadii Hlushchevskyi
+/// - Authors: Arkadii Hlushchevskyi
 /// - Copyright: © 2018. Arkadii Hlushchevskyi.
-/// - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
+/// - Seealsos: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
 import Foundation
 
 @available(iOS 8.0, *)
-class PlistStorage : AnyReadableStorage {
+public class PlistStorage : AnyReadableStorage {
     
     private var plist : [String : Any] = [:]
     
-    init?(plistName : String, bundle : Bundle? = nil) {
+    public init?(plistName : String, bundle : Bundle? = nil) {
         let bundle = bundle ?? Bundle.main
         guard let url = bundle.url(forResource: plistName, withExtension: "plist") else {
             log(error: .load(plistName, .missing))
@@ -28,15 +28,15 @@ class PlistStorage : AnyReadableStorage {
         plist = result
     }
    
-    func value(forKey key: String) -> Any? {
+    public func value(forKey key: String) -> Any? {
         return plist[key]
     }
     
-    var count: Int {
+    public var count: Int {
         return plist.count
     }
     
-    var dictionary: [String : Any] {
+    public var dictionary: [String : Any] {
         return plist
     }
     

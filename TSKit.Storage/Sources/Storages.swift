@@ -1,7 +1,7 @@
 /// - Since: 01/21/2018
-/// - Author: Arkadii Hlushchevskyi
+/// - Authors: Arkadii Hlushchevskyi
 /// - Copyright: © 2018. Arkadii Hlushchevskyi.
-/// - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
+/// - Seealsos: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
 /// Provides access to predefined storages.
 public enum Storages {
@@ -23,6 +23,7 @@ public enum Storages {
 
 /// Caches multiple loaded plist storages.
 private class PlistStorageContainer {
+    
     private static var storages : [String : AnyReadableStorage] = [:]
     
     static func storage(named: String) -> AnyReadableStorage? {
