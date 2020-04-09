@@ -1,7 +1,7 @@
-/// - Since: 01/21/2018
-/// - Authors: Arkadii Hlushchevskyi
-/// - Copyright: © 2018. Arkadii Hlushchevskyi.
-/// - Seealsos: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
+// - Since: 01/21/2018
+// - Author: Arkadii Hlushchevskyi
+// - Copyright: © 2020. Arkadii Hlushchevskyi.
+// - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
 /// Provides access to predefined storages.
 public enum Storages {

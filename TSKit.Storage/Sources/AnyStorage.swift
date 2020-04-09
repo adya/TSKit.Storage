@@ -1,15 +1,10 @@
-/// - Since: 01/21/2018
-/// - Authors: Arkadii Hlushchevskyi
-/// - Copyright: © 2018. Arkadii Hlushchevskyi.
-/// - Seealsos: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
+// - Since: 04/07/2017
+// - Author: Arkadii Hlushchevskyi
+// - Copyright: © 2020. Arkadii Hlushchevskyi.
+// - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
-/**
- Represents a common way to access (read/write) values in storages of any kind.
- 
- - Version: 1.0
- - Since:   04/07/2017
- - Author:  AdYa
- */
+/// Represents a common way to access (read/write) values in storages of any kind.
+/// - Version: 1.0
 public protocol AnyStorage : AnyReadableStorage {
     
     /// Gets or sets value for given key.
