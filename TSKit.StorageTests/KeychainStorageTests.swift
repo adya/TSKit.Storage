@@ -30,7 +30,7 @@ extension KeychainStorageTests {
         assertIntegrity(with: Int.max)
     }
     
-    func testDeciamlIntegrity() {
+    func testDecimalIntegrity() {
         assertIntegrity(with: 5 as Decimal)
         assertIntegrity(with: 5.55 as Decimal)
     }
