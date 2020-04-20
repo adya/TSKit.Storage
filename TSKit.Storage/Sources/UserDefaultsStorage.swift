@@ -7,7 +7,7 @@ import Foundation
 
 /// `NSUserDefaults` storage data source.
 @available(iOS 8, *)
-public class UserDefaultsStorage : AnyStorage {
+public class UserDefaultsStorage : AnyDynamicStorage {
     
     private var storage = UserDefaults.standard
     

@@ -3,20 +3,24 @@
 // - Copyright: © 2020. Arkadii Hlushchevskyi.
 // - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
+@available(*, renamed: "Storage")
 /// Provides access to predefined storages.
-public enum Storages {
+public typealias Storages = Storage
+
+/// Provides access to predefined storages.
+public enum Storage {
     
     /// Local storage. Persistent throughout multiple app launches.
-    public static let local : AnyStorage = UserDefaultsStorage()
+    public static let local: AnyDynamicStorage = UserDefaultsStorage()
     
     /// Temporary storage. Persistent throughout the app during single launch.
-    public static let temp : AnyStorage = DictionaryStorage()
+    public static let temp: AnyDynamicStorage = DictionaryStorage()
     
     /// Remote storage. Persistent throughout multiple devices connected to the same iCloud.
-    public static let remote : AnyStorage = UbiquitousStorage()
+    public static let remote: AnyDynamicStorage = UbiquitousStorage()
     
     /// Plist storages. Read-only storages. Persistent for app build.
-    public static func plist(named: String) -> AnyReadableStorage? {
+    public static func plist(named: String) -> AnyReadableDynamicStorage? {
         return PlistStorageContainer.storage(named: named)
     }
 }
@@ -24,9 +28,9 @@ public enum Storages {
 /// Caches multiple loaded plist storages.
 private class PlistStorageContainer {
     
-    private static var storages : [String : AnyReadableStorage] = [:]
+    private static var storages : [String : AnyReadableDynamicStorage] = [:]
     
-    static func storage(named: String) -> AnyReadableStorage? {
+    static func storage(named: String) -> AnyReadableDynamicStorage? {
         if let storage = storages[named] {
             return storage
         }

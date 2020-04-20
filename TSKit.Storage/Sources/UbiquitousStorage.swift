@@ -7,7 +7,8 @@ import Foundation
 
 /// iCloud Storage.
 @available(iOS 8.0, *)
-public class UbiquitousStorage : AnyStorage {
+public class UbiquitousStorage : AnyDynamicStorage {
+
     private var storage = NSUbiquitousKeyValueStore.default
     
     public func value(forKey key: String) -> Any? {

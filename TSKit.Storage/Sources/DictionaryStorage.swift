@@ -3,7 +3,7 @@
 // - Copyright: © 2020. Arkadii Hlushchevskyi.
 // - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
-public class DictionaryStorage : AnyStorage {
+public class DictionaryStorage : AnyDynamicStorage {
     
     private var storage = [String : Any]()
     

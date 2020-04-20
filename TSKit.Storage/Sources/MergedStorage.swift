@@ -6,11 +6,11 @@
 import TSKit_Core
 
 /// Merges multiple storages into one.
-public class MergedStorage : AnyReadableStorage {
+public class MergedStorage : AnyReadableDynamicStorage {
     
-    private let storages : [AnyReadableStorage]
+    private let storages : [AnyReadableDynamicStorage]
     
-    public init(storages: [AnyReadableStorage]) {
+    public init(storages: [AnyReadableDynamicStorage]) {
         self.storages = storages
     }
     
