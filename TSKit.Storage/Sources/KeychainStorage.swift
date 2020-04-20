@@ -33,10 +33,12 @@ public class KeychainStorage : AnyTypedStorage {
         getValue(forKey: key) != nil
     }
     
+    @discardableResult
     public func removeValue(forKey key: String) -> Bool {
         deleteValue(forKey: key)
     }
     
+    @discardableResult
     public func removeAll() -> Bool {
         deleteAll()
     }
@@ -53,27 +55,27 @@ public extension KeychainStorage {
     
     @discardableResult
     func set(_ value: Int, forKey key: String) -> Bool {
-        add(NSNumber(value: value), forKey: key)
+        set(NSNumber(value: value), forKey: key)
     }
     
     @discardableResult
     func set(_ value: Double, forKey key: String) -> Bool {
-        add(NSNumber(value: value), forKey: key)
+        set(NSNumber(value: value), forKey: key)
     }
     
     @discardableResult
     func set(_ value: Decimal, forKey key: String) -> Bool {
-        add(NSDecimalNumber(decimal: value), forKey: key)
+        set(NSDecimalNumber(decimal: value), forKey: key)
     }
     
     @discardableResult
     func set(_ value: Float, forKey key: String) -> Bool {
-        add(NSNumber(value: value), forKey: key)
+        set(NSNumber(value: value), forKey: key)
     }
     
     @discardableResult
     func set(_ value: Bool, forKey key: String) -> Bool {
-        add(NSNumber(value: value), forKey: key)
+        set(NSNumber(value: value), forKey: key)
     }
     
     @discardableResult
