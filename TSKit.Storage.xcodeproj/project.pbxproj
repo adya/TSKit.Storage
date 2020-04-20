@@ -12,6 +12,10 @@
 		0060C23B244DCEB400D73311 /* AnyTypedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C238244DCD6100D73311 /* AnyTypedStorage.swift */; };
 		0060C23F244DD2A700D73311 /* AnyDynamicStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */; };
 		0060C241244DD3FB00D73311 /* AnyReadableDynamicStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C240244DD2C300D73311 /* AnyReadableDynamicStorage.swift */; };
+		0060C283244DF68700D73311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C282244DF68700D73311 /* AppDelegate.swift */; };
+		0060C28A244DF68700D73311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060C288244DF68700D73311 /* Main.storyboard */; };
+		0060C28C244DF68900D73311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0060C28B244DF68900D73311 /* Assets.xcassets */; };
+		0060C28F244DF68900D73311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060C28D244DF68900D73311 /* LaunchScreen.storyboard */; };
 		006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006182DA20604BEA0079DD8C /* TSKit_Core.framework */; };
 		00A0522C2102144500A2D648 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A0522B2102144500A2D648 /* StorageContainer.swift */; };
 		00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */; };
@@ -28,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0060C294244DF69600D73311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C2C3901FE330F200721731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0060C27F244DF68700D73311;
+			remoteInfo = "Keychain Host";
+		};
 		00C2C3A41FE330F200721731 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00C2C3901FE330F200721731 /* Project object */;
@@ -43,6 +54,13 @@
 		0060C239244DCD7200D73311 /* AnyReadableTypedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReadableTypedStorage.swift; sourceTree = "<group>"; };
 		0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDynamicStorage.swift; sourceTree = "<group>"; };
 		0060C240244DD2C300D73311 /* AnyReadableDynamicStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReadableDynamicStorage.swift; sourceTree = "<group>"; };
+		0060C280244DF68700D73311 /* Keychain Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Host.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0060C282244DF68700D73311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0060C289244DF68700D73311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0060C28B244DF68900D73311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0060C28E244DF68900D73311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0060C290244DF68900D73311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0060C296244DF69B00D73311 /* Keychain Host.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Keychain Host.entitlements"; sourceTree = "<group>"; };
 		006182D820604AEB0079DD8C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		006182DA20604BEA0079DD8C /* TSKit_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TSKit_Core.framework; path = Carthage/Build/iOS/TSKit_Core.framework; sourceTree = "<group>"; };
 		00A0522B2102144500A2D648 /* StorageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageContainer.swift; sourceTree = "<group>"; };
@@ -63,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0060C27D244DF68700D73311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00C2C3951FE330F200721731 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,11 +107,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0060C281244DF68700D73311 /* Keychain Host */ = {
+			isa = PBXGroup;
+			children = (
+				0060C296244DF69B00D73311 /* Keychain Host.entitlements */,
+				0060C282244DF68700D73311 /* AppDelegate.swift */,
+				0060C288244DF68700D73311 /* Main.storyboard */,
+				0060C28B244DF68900D73311 /* Assets.xcassets */,
+				0060C28D244DF68900D73311 /* LaunchScreen.storyboard */,
+				0060C290244DF68900D73311 /* Info.plist */,
+			);
+			path = "Keychain Host";
+			sourceTree = "<group>";
+		};
 		00C2C38F1FE330F200721731 = {
 			isa = PBXGroup;
 			children = (
 				00C2C39B1FE330F200721731 /* TSKit.Storage */,
 				00C2C3A61FE330F200721731 /* TSKit.StorageTests */,
+				0060C281244DF68700D73311 /* Keychain Host */,
 				00C2C39A1FE330F200721731 /* Products */,
 				00C2C3CF1FE3323400721731 /* Frameworks */,
 			);
@@ -97,6 +136,7 @@
 			children = (
 				00C2C3991FE330F200721731 /* TSKit_Storage.framework */,
 				00C2C3A21FE330F200721731 /* TSKit.StorageTests.xctest */,
+				0060C280244DF68700D73311 /* Keychain Host.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +204,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0060C27F244DF68700D73311 /* Keychain Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0060C291244DF68900D73311 /* Build configuration list for PBXNativeTarget "Keychain Host" */;
+			buildPhases = (
+				0060C27C244DF68700D73311 /* Sources */,
+				0060C27D244DF68700D73311 /* Frameworks */,
+				0060C27E244DF68700D73311 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Keychain Host";
+			productName = "Keychain Host";
+			productReference = 0060C280244DF68700D73311 /* Keychain Host.app */;
+			productType = "com.apple.product-type.application";
+		};
 		00C2C3981FE330F200721731 /* TSKit.Storage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00C2C3AD1FE330F200721731 /* Build configuration list for PBXNativeTarget "TSKit.Storage" */;
@@ -195,6 +252,7 @@
 			);
 			dependencies = (
 				00C2C3A51FE330F200721731 /* PBXTargetDependency */,
+				0060C295244DF69600D73311 /* PBXTargetDependency */,
 			);
 			name = TSKit.StorageTests;
 			productName = TSKit.StorageTests;
@@ -211,6 +269,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Arkadiy Glushchevsky";
 				TargetAttributes = {
+					0060C27F244DF68700D73311 = {
+						CreatedOnToolsVersion = 11.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					00C2C3981FE330F200721731 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -219,6 +281,7 @@
 					00C2C3A11FE330F200721731 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 0060C27F244DF68700D73311;
 					};
 				};
 			};
@@ -237,11 +300,22 @@
 			targets = (
 				00C2C3981FE330F200721731 /* TSKit.Storage */,
 				00C2C3A11FE330F200721731 /* TSKit.StorageTests */,
+				0060C27F244DF68700D73311 /* Keychain Host */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0060C27E244DF68700D73311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0060C28F244DF68900D73311 /* LaunchScreen.storyboard in Resources */,
+				0060C28C244DF68900D73311 /* Assets.xcassets in Resources */,
+				0060C28A244DF68700D73311 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00C2C3971FE330F200721731 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +349,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0060C27C244DF68700D73311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0060C283244DF68700D73311 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00C2C3941FE330F200721731 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,6 +389,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0060C295244DF69600D73311 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0060C27F244DF68700D73311 /* Keychain Host */;
+			targetProxy = 0060C294244DF69600D73311 /* PBXContainerItemProxy */;
+		};
 		00C2C3A51FE330F200721731 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00C2C3981FE330F200721731 /* TSKit.Storage */;
@@ -314,7 +401,69 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		0060C288244DF68700D73311 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0060C289244DF68700D73311 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0060C28D244DF68900D73311 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0060C28E244DF68900D73311 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		0060C292244DF68900D73311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = "Keychain Host/Keychain Host.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2NBF8K2F9;
+				INFOPLIST_FILE = "Keychain Host/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glar.storage.keychainhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0060C293244DF68900D73311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = "Keychain Host/Keychain Host.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2NBF8K2F9;
+				INFOPLIST_FILE = "Keychain Host/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glar.storage.keychainhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		00C2C3AB1FE330F200721731 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,6 +640,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keychain Host.app/Keychain Host";
 			};
 			name = Debug;
 		};
@@ -506,12 +656,22 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keychain Host.app/Keychain Host";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0060C291244DF68900D73311 /* Build configuration list for PBXNativeTarget "Keychain Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0060C292244DF68900D73311 /* Debug */,
+				0060C293244DF68900D73311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00C2C3931FE330F200721731 /* Build configuration list for PBXProject "TSKit.Storage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
