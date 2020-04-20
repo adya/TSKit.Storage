@@ -19,6 +19,10 @@ public enum Storage {
     /// Remote storage. Persistent throughout multiple devices connected to the same iCloud.
     public static let remote: AnyDynamicStorage = UbiquitousStorage()
     
+    /// Secure local storage. Persistent throughout multiple app launches.
+    /// Stored values can be accessed only through the application that saved these values.
+    public static let secure: AnyTypedStorage = KeychainStorage()
+    
     /// Plist storages. Read-only storages. Persistent for app build.
     public static func plist(named: String) -> AnyReadableDynamicStorage? {
         return PlistStorageContainer.storage(named: named)

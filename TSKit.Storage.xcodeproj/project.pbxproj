@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00508815244DAD39003324D9 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00508814244DAD39003324D9 /* KeychainStorage.swift */; };
 		0060C23A244DCEB100D73311 /* AnyReadableTypedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C239244DCD7200D73311 /* AnyReadableTypedStorage.swift */; };
 		0060C23B244DCEB400D73311 /* AnyTypedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C238244DCD6100D73311 /* AnyTypedStorage.swift */; };
 		0060C23F244DD2A700D73311 /* AnyDynamicStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00508814244DAD39003324D9 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		0060C238244DCD6100D73311 /* AnyTypedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTypedStorage.swift; sourceTree = "<group>"; };
 		0060C239244DCD7200D73311 /* AnyReadableTypedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReadableTypedStorage.swift; sourceTree = "<group>"; };
 		0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDynamicStorage.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				00C2C3B51FE331EA00721731 /* PlistStorage.swift */,
 				00C2C3BA1FE331EA00721731 /* UbiquitousStorage.swift */,
 				00C2C3BB1FE331EA00721731 /* UserDefaultsStorage.swift */,
+				00508814244DAD39003324D9 /* KeychainStorage.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				00C2C3CD1FE331EA00721731 /* DictionaryStorage.swift in Sources */,
 				00C2C3BF1FE331EA00721731 /* PlistStorage.swift in Sources */,
 				00C2C3C11FE331EA00721731 /* AnyStorage.swift in Sources */,
+				00508815244DAD39003324D9 /* KeychainStorage.swift in Sources */,
 				00C2C3BD1FE331EA00721731 /* AnyReadableStorage.swift in Sources */,
 				00A0522C2102144500A2D648 /* StorageContainer.swift in Sources */,
 			);
