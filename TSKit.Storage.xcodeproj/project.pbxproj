@@ -15,7 +15,7 @@
 		006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006182DA20604BEA0079DD8C /* TSKit_Core.framework */; };
 		00A0522C2102144500A2D648 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A0522B2102144500A2D648 /* StorageContainer.swift */; };
 		00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */; };
-		00C2C3A81FE330F200721731 /* TSKit_StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3A71FE330F200721731 /* TSKit_StorageTests.swift */; };
+		00C2C3A81FE330F200721731 /* KeychainStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */; };
 		00C2C3AA1FE330F200721731 /* TSKit_Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C2C39C1FE330F200721731 /* TSKit_Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00C2C3BD1FE331EA00721731 /* AnyReadableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B41FE331EA00721731 /* AnyReadableStorage.swift */; };
 		00C2C3BF1FE331EA00721731 /* PlistStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B51FE331EA00721731 /* PlistStorage.swift */; };
@@ -50,7 +50,7 @@
 		00C2C39C1FE330F200721731 /* TSKit_Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSKit_Storage.h; sourceTree = "<group>"; };
 		00C2C39D1FE330F200721731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C2C3A21FE330F200721731 /* TSKit.StorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSKit.StorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00C2C3A71FE330F200721731 /* TSKit_StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSKit_StorageTests.swift; sourceTree = "<group>"; };
+		00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageTests.swift; sourceTree = "<group>"; };
 		00C2C3A91FE330F200721731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C2C3B41FE331EA00721731 /* AnyReadableStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyReadableStorage.swift; sourceTree = "<group>"; };
 		00C2C3B51FE331EA00721731 /* PlistStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistStorage.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		00C2C3A61FE330F200721731 /* TSKit.StorageTests */ = {
 			isa = PBXGroup;
 			children = (
-				00C2C3A71FE330F200721731 /* TSKit_StorageTests.swift */,
+				00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */,
 				00C2C3A91FE330F200721731 /* Info.plist */,
 			);
 			path = TSKit.StorageTests;
@@ -300,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C2C3A81FE330F200721731 /* TSKit_StorageTests.swift in Sources */,
+				00C2C3A81FE330F200721731 /* KeychainStorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
