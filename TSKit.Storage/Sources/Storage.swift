@@ -3,8 +3,8 @@
 // - Copyright: © 2020. Arkadii Hlushchevskyi.
 // - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
-@available(*, renamed: "Storage")
 /// Provides access to predefined storages.
+@available(*, renamed: "Storage")
 public typealias Storages = Storage
 
 /// Provides access to predefined storages.
@@ -25,23 +25,6 @@ public enum Storage {
     
     /// Plist storages. Read-only storages. Persistent for app build.
     public static func plist(named: String) -> AnyReadableDynamicStorage? {
-        return PlistStorageContainer.storage(named: named)
-    }
-}
-
-/// Caches multiple loaded plist storages.
-private class PlistStorageContainer {
-    
-    private static var storages : [String : AnyReadableDynamicStorage] = [:]
-    
-    static func storage(named: String) -> AnyReadableDynamicStorage? {
-        if let storage = storages[named] {
-            return storage
-        }
-        
-        guard let plist = PlistStorage(plistName: named) else { return nil }
-       
-        storages[named] = plist
-        return plist
+        PlistStorage(plistName: named)
     }
 }
