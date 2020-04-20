@@ -16,6 +16,7 @@
 		0060C28A244DF68700D73311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060C288244DF68700D73311 /* Main.storyboard */; };
 		0060C28C244DF68900D73311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0060C28B244DF68900D73311 /* Assets.xcassets */; };
 		0060C28F244DF68900D73311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060C28D244DF68900D73311 /* LaunchScreen.storyboard */; };
+		0060C29A244E052400D73311 /* TypedStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C299244E052400D73311 /* TypedStorageTests.swift */; };
 		006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006182DA20604BEA0079DD8C /* TSKit_Core.framework */; };
 		00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */; };
 		00C2C3A81FE330F200721731 /* KeychainStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */; };
@@ -60,6 +61,7 @@
 		0060C28E244DF68900D73311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0060C290244DF68900D73311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0060C296244DF69B00D73311 /* Keychain Host.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Keychain Host.entitlements"; sourceTree = "<group>"; };
+		0060C299244E052400D73311 /* TypedStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedStorageTests.swift; sourceTree = "<group>"; };
 		006182D820604AEB0079DD8C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		006182DA20604BEA0079DD8C /* TSKit_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TSKit_Core.framework; path = Carthage/Build/iOS/TSKit_Core.framework; sourceTree = "<group>"; };
 		00C2C3991FE330F200721731 /* TSKit_Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSKit_Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */,
+				0060C299244E052400D73311 /* TypedStorageTests.swift */,
 				00C2C3A91FE330F200721731 /* Info.plist */,
 			);
 			path = TSKit.StorageTests;
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C2C3A81FE330F200721731 /* KeychainStorageTests.swift in Sources */,
+				0060C29A244E052400D73311 /* TypedStorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

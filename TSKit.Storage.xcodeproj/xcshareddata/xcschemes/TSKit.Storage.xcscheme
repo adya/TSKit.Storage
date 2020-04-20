@@ -59,6 +59,11 @@
                BlueprintName = "TSKit.StorageTests"
                ReferencedContainer = "container:TSKit.Storage.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TypedStorageTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
