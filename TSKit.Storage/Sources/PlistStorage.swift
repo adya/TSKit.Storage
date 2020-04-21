@@ -6,22 +6,22 @@
 import Foundation
 
 @available(iOS 8.0, *)
-public class PlistStorage : AnyReadableStorage {
+public class PlistStorage : AnyReadableDynamicStorage {
     
-    private var plist : [String : Any] = [:]
+    private let plist: [String: Any]
     
     public init?(plistName : String, bundle : Bundle? = nil) {
         let bundle = bundle ?? Bundle.main
         guard let url = bundle.url(forResource: plistName, withExtension: "plist") else {
-            log(error: .load(plistName, .missing))
+            PlistStorage.log(error: .load(plistName, .missing))
             return nil
         }
         guard let data = try? Data(contentsOf: url) else {
-            log(error: .load(plistName, .invalidData))
+            PlistStorage.log(error: .load(plistName, .invalidData))
             return nil
         }
         guard let result = (try? PropertyListSerialization.propertyList(from: data, options: [], format: nil)) as? [String : Any] else {
-            log(error: .load(plistName, .invalidRoot))
+            PlistStorage.log(error: .load(plistName, .invalidRoot))
             return nil
         }
         
@@ -40,7 +40,7 @@ public class PlistStorage : AnyReadableStorage {
         return plist
     }
     
-    private func log(error : StorageError) {
+    private static func log(error : StorageError) {
         let msg : String
         switch error {
         case let .load(_, reason): msg = "\(error.description). Reason: \(reason.rawValue)."
