@@ -3,6 +3,8 @@
 // - Copyright: © 2020. Arkadii Hlushchevskyi.
 // - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
+import Foundation
+
 /// Represents a common way to read values in storages of any kind in a typed manner.
 public protocol AnyReadableTypedStorage : AnyReadableStorage {
  

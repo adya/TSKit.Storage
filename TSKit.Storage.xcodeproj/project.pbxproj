@@ -1,698 +1,1623 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 48;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		00508815244DAD39003324D9 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00508814244DAD39003324D9 /* KeychainStorage.swift */; };
-		0060C23A244DCEB100D73311 /* AnyReadableTypedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C239244DCD7200D73311 /* AnyReadableTypedStorage.swift */; };
-		0060C23B244DCEB400D73311 /* AnyTypedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C238244DCD6100D73311 /* AnyTypedStorage.swift */; };
-		0060C23F244DD2A700D73311 /* AnyDynamicStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */; };
-		0060C241244DD3FB00D73311 /* AnyReadableDynamicStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C240244DD2C300D73311 /* AnyReadableDynamicStorage.swift */; };
-		0060C283244DF68700D73311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C282244DF68700D73311 /* AppDelegate.swift */; };
-		0060C28A244DF68700D73311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060C288244DF68700D73311 /* Main.storyboard */; };
-		0060C28C244DF68900D73311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0060C28B244DF68900D73311 /* Assets.xcassets */; };
-		0060C28F244DF68900D73311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0060C28D244DF68900D73311 /* LaunchScreen.storyboard */; };
-		0060C29A244E052400D73311 /* TypedStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060C299244E052400D73311 /* TypedStorageTests.swift */; };
-		006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006182DA20604BEA0079DD8C /* TSKit_Core.framework */; };
-		00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */; };
-		00C2C3A81FE330F200721731 /* KeychainStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */; };
-		00C2C3AA1FE330F200721731 /* TSKit_Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C2C39C1FE330F200721731 /* TSKit_Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		00C2C3BD1FE331EA00721731 /* AnyReadableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B41FE331EA00721731 /* AnyReadableStorage.swift */; };
-		00C2C3BF1FE331EA00721731 /* PlistStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B51FE331EA00721731 /* PlistStorage.swift */; };
-		00C2C3C11FE331EA00721731 /* AnyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B61FE331EA00721731 /* AnyStorage.swift */; };
-		00C2C3C51FE331EA00721731 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B81FE331EA00721731 /* Storage.swift */; };
-		00C2C3C71FE331EA00721731 /* MergedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3B91FE331EA00721731 /* MergedStorage.swift */; };
-		00C2C3C91FE331EA00721731 /* UbiquitousStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3BA1FE331EA00721731 /* UbiquitousStorage.swift */; };
-		00C2C3CB1FE331EA00721731 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3BB1FE331EA00721731 /* UserDefaultsStorage.swift */; };
-		00C2C3CD1FE331EA00721731 /* DictionaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0060C294244DF69600D73311 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00C2C3901FE330F200721731 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0060C27F244DF68700D73311;
-			remoteInfo = "Keychain Host";
-		};
-		00C2C3A41FE330F200721731 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00C2C3901FE330F200721731 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00C2C3981FE330F200721731;
-			remoteInfo = TSKit.Storage;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		00508814244DAD39003324D9 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
-		0060C238244DCD6100D73311 /* AnyTypedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTypedStorage.swift; sourceTree = "<group>"; };
-		0060C239244DCD7200D73311 /* AnyReadableTypedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReadableTypedStorage.swift; sourceTree = "<group>"; };
-		0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDynamicStorage.swift; sourceTree = "<group>"; };
-		0060C240244DD2C300D73311 /* AnyReadableDynamicStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReadableDynamicStorage.swift; sourceTree = "<group>"; };
-		0060C280244DF68700D73311 /* Keychain Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain Host.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0060C282244DF68700D73311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0060C289244DF68700D73311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0060C28B244DF68900D73311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0060C28E244DF68900D73311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0060C290244DF68900D73311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0060C296244DF69B00D73311 /* Keychain Host.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Keychain Host.entitlements"; sourceTree = "<group>"; };
-		0060C299244E052400D73311 /* TypedStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedStorageTests.swift; sourceTree = "<group>"; };
-		006182D820604AEB0079DD8C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		006182DA20604BEA0079DD8C /* TSKit_Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TSKit_Core.framework; path = Carthage/Build/iOS/TSKit_Core.framework; sourceTree = "<group>"; };
-		00C2C3991FE330F200721731 /* TSKit_Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSKit_Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		00C2C39C1FE330F200721731 /* TSKit_Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSKit_Storage.h; sourceTree = "<group>"; };
-		00C2C39D1FE330F200721731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00C2C3A21FE330F200721731 /* TSKit.StorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSKit.StorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorageTests.swift; sourceTree = "<group>"; };
-		00C2C3A91FE330F200721731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00C2C3B41FE331EA00721731 /* AnyReadableStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyReadableStorage.swift; sourceTree = "<group>"; };
-		00C2C3B51FE331EA00721731 /* PlistStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistStorage.swift; sourceTree = "<group>"; };
-		00C2C3B61FE331EA00721731 /* AnyStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyStorage.swift; sourceTree = "<group>"; };
-		00C2C3B81FE331EA00721731 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		00C2C3B91FE331EA00721731 /* MergedStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergedStorage.swift; sourceTree = "<group>"; };
-		00C2C3BA1FE331EA00721731 /* UbiquitousStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbiquitousStorage.swift; sourceTree = "<group>"; };
-		00C2C3BB1FE331EA00721731 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
-		00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryStorage.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		0060C27D244DF68700D73311 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00C2C3951FE330F200721731 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				006182DB20604BEA0079DD8C /* TSKit_Core.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00C2C39F1FE330F200721731 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00C2C3A31FE330F200721731 /* TSKit_Storage.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0060C281244DF68700D73311 /* Keychain Host */ = {
-			isa = PBXGroup;
-			children = (
-				0060C296244DF69B00D73311 /* Keychain Host.entitlements */,
-				0060C282244DF68700D73311 /* AppDelegate.swift */,
-				0060C288244DF68700D73311 /* Main.storyboard */,
-				0060C28B244DF68900D73311 /* Assets.xcassets */,
-				0060C28D244DF68900D73311 /* LaunchScreen.storyboard */,
-				0060C290244DF68900D73311 /* Info.plist */,
-			);
-			path = "Keychain Host";
-			sourceTree = "<group>";
-		};
-		0060C298244DF7B500D73311 /* Storages */ = {
-			isa = PBXGroup;
-			children = (
-				00C2C3BC1FE331EA00721731 /* DictionaryStorage.swift */,
-				00C2C3B91FE331EA00721731 /* MergedStorage.swift */,
-				00C2C3B51FE331EA00721731 /* PlistStorage.swift */,
-				00C2C3BA1FE331EA00721731 /* UbiquitousStorage.swift */,
-				00C2C3BB1FE331EA00721731 /* UserDefaultsStorage.swift */,
-				00508814244DAD39003324D9 /* KeychainStorage.swift */,
-			);
-			name = Storages;
-			sourceTree = "<group>";
-		};
-		00C2C38F1FE330F200721731 = {
-			isa = PBXGroup;
-			children = (
-				00C2C39B1FE330F200721731 /* TSKit.Storage */,
-				00C2C3A61FE330F200721731 /* TSKit.StorageTests */,
-				0060C281244DF68700D73311 /* Keychain Host */,
-				00C2C39A1FE330F200721731 /* Products */,
-				00C2C3CF1FE3323400721731 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		00C2C39A1FE330F200721731 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00C2C3991FE330F200721731 /* TSKit_Storage.framework */,
-				00C2C3A21FE330F200721731 /* TSKit.StorageTests.xctest */,
-				0060C280244DF68700D73311 /* Keychain Host.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		00C2C39B1FE330F200721731 /* TSKit.Storage */ = {
-			isa = PBXGroup;
-			children = (
-				00C2C3B31FE331D500721731 /* Sources */,
-				006182D820604AEB0079DD8C /* Cartfile */,
-				00C2C39C1FE330F200721731 /* TSKit_Storage.h */,
-				00C2C39D1FE330F200721731 /* Info.plist */,
-			);
-			path = TSKit.Storage;
-			sourceTree = "<group>";
-		};
-		00C2C3A61FE330F200721731 /* TSKit.StorageTests */ = {
-			isa = PBXGroup;
-			children = (
-				00C2C3A71FE330F200721731 /* KeychainStorageTests.swift */,
-				0060C299244E052400D73311 /* TypedStorageTests.swift */,
-				00C2C3A91FE330F200721731 /* Info.plist */,
-			);
-			path = TSKit.StorageTests;
-			sourceTree = "<group>";
-		};
-		00C2C3B31FE331D500721731 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				00C2C3B81FE331EA00721731 /* Storage.swift */,
-				0060C298244DF7B500D73311 /* Storages */,
-				00C2C3B41FE331EA00721731 /* AnyReadableStorage.swift */,
-				00C2C3B61FE331EA00721731 /* AnyStorage.swift */,
-				0060C240244DD2C300D73311 /* AnyReadableDynamicStorage.swift */,
-				0060C23E244DD2A700D73311 /* AnyDynamicStorage.swift */,
-				0060C239244DCD7200D73311 /* AnyReadableTypedStorage.swift */,
-				0060C238244DCD6100D73311 /* AnyTypedStorage.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		00C2C3CF1FE3323400721731 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				006182DA20604BEA0079DD8C /* TSKit_Core.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		00C2C3961FE330F200721731 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00C2C3AA1FE330F200721731 /* TSKit_Storage.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		0060C27F244DF68700D73311 /* Keychain Host */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0060C291244DF68900D73311 /* Build configuration list for PBXNativeTarget "Keychain Host" */;
-			buildPhases = (
-				0060C27C244DF68700D73311 /* Sources */,
-				0060C27D244DF68700D73311 /* Frameworks */,
-				0060C27E244DF68700D73311 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Keychain Host";
-			productName = "Keychain Host";
-			productReference = 0060C280244DF68700D73311 /* Keychain Host.app */;
-			productType = "com.apple.product-type.application";
-		};
-		00C2C3981FE330F200721731 /* TSKit.Storage */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00C2C3AD1FE330F200721731 /* Build configuration list for PBXNativeTarget "TSKit.Storage" */;
-			buildPhases = (
-				00C2C3941FE330F200721731 /* Sources */,
-				00C2C3951FE330F200721731 /* Frameworks */,
-				00C2C3961FE330F200721731 /* Headers */,
-				00C2C3971FE330F200721731 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TSKit.Storage;
-			productName = TSKit.Storage;
-			productReference = 00C2C3991FE330F200721731 /* TSKit_Storage.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		00C2C3A11FE330F200721731 /* TSKit.StorageTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00C2C3B01FE330F200721731 /* Build configuration list for PBXNativeTarget "TSKit.StorageTests" */;
-			buildPhases = (
-				00C2C39E1FE330F200721731 /* Sources */,
-				00C2C39F1FE330F200721731 /* Frameworks */,
-				00C2C3A01FE330F200721731 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00C2C3A51FE330F200721731 /* PBXTargetDependency */,
-				0060C295244DF69600D73311 /* PBXTargetDependency */,
-			);
-			name = TSKit.StorageTests;
-			productName = TSKit.StorageTests;
-			productReference = 00C2C3A21FE330F200721731 /* TSKit.StorageTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		00C2C3901FE330F200721731 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "Arkadiy Glushchevsky";
-				TargetAttributes = {
-					0060C27F244DF68700D73311 = {
-						CreatedOnToolsVersion = 11.4.1;
-						ProvisioningStyle = Automatic;
-					};
-					00C2C3981FE330F200721731 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-					};
-					00C2C3A11FE330F200721731 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0060C27F244DF68700D73311;
-					};
-				};
-			};
-			buildConfigurationList = 00C2C3931FE330F200721731 /* Build configuration list for PBXProject "TSKit.Storage" */;
-			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 00C2C38F1FE330F200721731;
-			productRefGroup = 00C2C39A1FE330F200721731 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				00C2C3981FE330F200721731 /* TSKit.Storage */,
-				00C2C3A11FE330F200721731 /* TSKit.StorageTests */,
-				0060C27F244DF68700D73311 /* Keychain Host */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		0060C27E244DF68700D73311 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0060C28F244DF68900D73311 /* LaunchScreen.storyboard in Resources */,
-				0060C28C244DF68900D73311 /* Assets.xcassets in Resources */,
-				0060C28A244DF68700D73311 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00C2C3971FE330F200721731 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00C2C3A01FE330F200721731 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0060C27C244DF68700D73311 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0060C283244DF68700D73311 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00C2C3941FE330F200721731 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00C2C3CB1FE331EA00721731 /* UserDefaultsStorage.swift in Sources */,
-				00C2C3C51FE331EA00721731 /* Storage.swift in Sources */,
-				00C2C3C91FE331EA00721731 /* UbiquitousStorage.swift in Sources */,
-				0060C23F244DD2A700D73311 /* AnyDynamicStorage.swift in Sources */,
-				0060C23B244DCEB400D73311 /* AnyTypedStorage.swift in Sources */,
-				00C2C3C71FE331EA00721731 /* MergedStorage.swift in Sources */,
-				0060C241244DD3FB00D73311 /* AnyReadableDynamicStorage.swift in Sources */,
-				0060C23A244DCEB100D73311 /* AnyReadableTypedStorage.swift in Sources */,
-				00C2C3CD1FE331EA00721731 /* DictionaryStorage.swift in Sources */,
-				00C2C3BF1FE331EA00721731 /* PlistStorage.swift in Sources */,
-				00C2C3C11FE331EA00721731 /* AnyStorage.swift in Sources */,
-				00508815244DAD39003324D9 /* KeychainStorage.swift in Sources */,
-				00C2C3BD1FE331EA00721731 /* AnyReadableStorage.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00C2C39E1FE330F200721731 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00C2C3A81FE330F200721731 /* KeychainStorageTests.swift in Sources */,
-				0060C29A244E052400D73311 /* TypedStorageTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0060C295244DF69600D73311 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0060C27F244DF68700D73311 /* Keychain Host */;
-			targetProxy = 0060C294244DF69600D73311 /* PBXContainerItemProxy */;
-		};
-		00C2C3A51FE330F200721731 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00C2C3981FE330F200721731 /* TSKit.Storage */;
-			targetProxy = 00C2C3A41FE330F200721731 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0060C288244DF68700D73311 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0060C289244DF68700D73311 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0060C28D244DF68900D73311 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0060C28E244DF68900D73311 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		0060C292244DF68900D73311 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_ENTITLEMENTS = "Keychain Host/Keychain Host.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2NBF8K2F9;
-				INFOPLIST_FILE = "Keychain Host/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.glar.storage.keychainhost;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0060C293244DF68900D73311 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_ENTITLEMENTS = "Keychain Host/Keychain Host.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2NBF8K2F9;
-				INFOPLIST_FILE = "Keychain Host/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.glar.storage.keychainhost;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		00C2C3AB1FE330F200721731 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		00C2C3AC1FE330F200721731 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		00C2C3AE1FE330F200721731 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P2NBF8K2F9;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
-				INFOPLIST_FILE = TSKit.Storage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 2.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.glar.tskit.storage;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		00C2C3AF1FE330F200721731 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P2NBF8K2F9;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
-				INFOPLIST_FILE = TSKit.Storage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 2.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.glar.tskit.storage;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = NO;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		00C2C3B11FE330F200721731 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2NBF8K2F9;
-				INFOPLIST_FILE = TSKit.StorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.glar.TSKit-StorageTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keychain Host.app/Keychain Host";
-			};
-			name = Debug;
-		};
-		00C2C3B21FE330F200721731 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2NBF8K2F9;
-				INFOPLIST_FILE = TSKit.StorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.glar.TSKit-StorageTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keychain Host.app/Keychain Host";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		0060C291244DF68900D73311 /* Build configuration list for PBXNativeTarget "Keychain Host" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0060C292244DF68900D73311 /* Debug */,
-				0060C293244DF68900D73311 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00C2C3931FE330F200721731 /* Build configuration list for PBXProject "TSKit.Storage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00C2C3AB1FE330F200721731 /* Debug */,
-				00C2C3AC1FE330F200721731 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00C2C3AD1FE330F200721731 /* Build configuration list for PBXNativeTarget "TSKit.Storage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00C2C3AE1FE330F200721731 /* Debug */,
-				00C2C3AF1FE330F200721731 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00C2C3B01FE330F200721731 /* Build configuration list for PBXNativeTarget "TSKit.StorageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00C2C3B11FE330F200721731 /* Debug */,
-				00C2C3B21FE330F200721731 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 00C2C3901FE330F200721731 /* Project object */;
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastSwiftMigration = "9999";
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "en";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_91";
+         projectDirPath = ".";
+         targets = (
+            "TSKit.Core::TSKit.Core",
+            "TSKit.Core::SwiftPMPackageDescription",
+            "TSKit.Storage::TSKit.Storage",
+            "TSKit.Storage::SwiftPMPackageDescription",
+            "TSKit.Storage::TSKit.StoragePackageTests::ProductTarget",
+            "TSKit.Storage::TSKit.StorageTests"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXFileReference";
+         path = "AnyReadableDynamicStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_100" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_102" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_103",
+            "OBJ_104"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_103" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TSKit.Storage.xcodeproj/TSKit_Core_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TSKit-Core";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TSKit.Core";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_104" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TSKit.Storage.xcodeproj/TSKit_Core_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TSKit-Core";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TSKit.Core";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_105" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_106",
+            "OBJ_107",
+            "OBJ_108",
+            "OBJ_109",
+            "OBJ_110",
+            "OBJ_111",
+            "OBJ_112",
+            "OBJ_113",
+            "OBJ_114",
+            "OBJ_115",
+            "OBJ_116",
+            "OBJ_117",
+            "OBJ_118",
+            "OBJ_119",
+            "OBJ_120",
+            "OBJ_121",
+            "OBJ_122",
+            "OBJ_123",
+            "OBJ_124",
+            "OBJ_125",
+            "OBJ_126",
+            "OBJ_127",
+            "OBJ_128",
+            "OBJ_129",
+            "OBJ_130",
+            "OBJ_131",
+            "OBJ_132",
+            "OBJ_133",
+            "OBJ_134",
+            "OBJ_135",
+            "OBJ_136",
+            "OBJ_137",
+            "OBJ_138",
+            "OBJ_139",
+            "OBJ_140",
+            "OBJ_141",
+            "OBJ_142",
+            "OBJ_143",
+            "OBJ_144",
+            "OBJ_145",
+            "OBJ_146",
+            "OBJ_147",
+            "OBJ_148",
+            "OBJ_149",
+            "OBJ_150",
+            "OBJ_151",
+            "OBJ_152",
+            "OBJ_153",
+            "OBJ_154"
+         );
+      };
+      "OBJ_106" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_107" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_31";
+      };
+      "OBJ_108" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_32";
+      };
+      "OBJ_109" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_33";
+      };
+      "OBJ_11" = {
+         isa = "PBXFileReference";
+         path = "AnyReadableStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_110" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_36";
+      };
+      "OBJ_111" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_37";
+      };
+      "OBJ_112" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_38";
+      };
+      "OBJ_113" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_39";
+      };
+      "OBJ_114" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_40";
+      };
+      "OBJ_115" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_41";
+      };
+      "OBJ_116" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_42";
+      };
+      "OBJ_117" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_43";
+      };
+      "OBJ_118" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_44";
+      };
+      "OBJ_119" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_45";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "AnyReadableTypedStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_120" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_46";
+      };
+      "OBJ_121" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_47";
+      };
+      "OBJ_122" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_48";
+      };
+      "OBJ_123" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_49";
+      };
+      "OBJ_124" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_51";
+      };
+      "OBJ_125" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_53";
+      };
+      "OBJ_126" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_54";
+      };
+      "OBJ_127" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_55";
+      };
+      "OBJ_128" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_56";
+      };
+      "OBJ_129" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_58";
+      };
+      "OBJ_13" = {
+         isa = "PBXFileReference";
+         path = "AnyStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_130" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_59";
+      };
+      "OBJ_131" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_61";
+      };
+      "OBJ_132" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_62";
+      };
+      "OBJ_133" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_64";
+      };
+      "OBJ_134" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_65";
+      };
+      "OBJ_135" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_66";
+      };
+      "OBJ_136" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_67";
+      };
+      "OBJ_137" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_68";
+      };
+      "OBJ_138" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_69";
+      };
+      "OBJ_139" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_71";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "AnyTypedStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_140" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_72";
+      };
+      "OBJ_141" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_73";
+      };
+      "OBJ_142" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_75";
+      };
+      "OBJ_143" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_76";
+      };
+      "OBJ_144" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_77";
+      };
+      "OBJ_145" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_79";
+      };
+      "OBJ_146" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_80";
+      };
+      "OBJ_147" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_81";
+      };
+      "OBJ_148" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_82";
+      };
+      "OBJ_149" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_83";
+      };
+      "OBJ_15" = {
+         isa = "PBXFileReference";
+         path = "DictionaryStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_150" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_85";
+      };
+      "OBJ_151" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_86";
+      };
+      "OBJ_152" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_87";
+      };
+      "OBJ_153" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_88";
+      };
+      "OBJ_154" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_89";
+      };
+      "OBJ_155" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_157" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_158",
+            "OBJ_159"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_158" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.3.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_159" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.3.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_16" = {
+         isa = "PBXFileReference";
+         path = "KeychainStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_160" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_161"
+         );
+      };
+      "OBJ_161" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_90";
+      };
+      "OBJ_163" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_164",
+            "OBJ_165"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_164" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TSKit.Storage.xcodeproj/TSKit_Storage_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TSKit-Storage";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TSKit.Storage";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_165" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TSKit.Storage.xcodeproj/TSKit_Storage_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TSKit-Storage";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TSKit.Storage";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_166" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_167",
+            "OBJ_168",
+            "OBJ_169",
+            "OBJ_170",
+            "OBJ_171",
+            "OBJ_172",
+            "OBJ_173",
+            "OBJ_174",
+            "OBJ_175",
+            "OBJ_176",
+            "OBJ_177",
+            "OBJ_178",
+            "OBJ_179"
+         );
+      };
+      "OBJ_167" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_9";
+      };
+      "OBJ_168" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_10";
+      };
+      "OBJ_169" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_11";
+      };
+      "OBJ_17" = {
+         isa = "PBXFileReference";
+         path = "MergedStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_170" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_171" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_13";
+      };
+      "OBJ_172" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_173" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_15";
+      };
+      "OBJ_174" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_16";
+      };
+      "OBJ_175" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_176" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
+      };
+      "OBJ_177" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_178" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
+      };
+      "OBJ_179" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "PlistStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_180" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_181"
+         );
+      };
+      "OBJ_181" = {
+         isa = "PBXBuildFile";
+         fileRef = "TSKit.Core::TSKit.Core::Product";
+      };
+      "OBJ_182" = {
+         isa = "PBXTargetDependency";
+         target = "TSKit.Core::TSKit.Core";
+      };
+      "OBJ_184" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_185",
+            "OBJ_186"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_185" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.3.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_186" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.3.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_187" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_188"
+         );
+      };
+      "OBJ_188" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_19" = {
+         isa = "PBXFileReference";
+         path = "Storage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_190" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_191",
+            "OBJ_192"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_191" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_192" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_193" = {
+         isa = "PBXTargetDependency";
+         target = "TSKit.Storage::TSKit.StorageTests";
+      };
+      "OBJ_195" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_196",
+            "OBJ_197"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_196" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TSKit.Storage.xcodeproj/TSKit_StorageTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TSKit.StorageTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_197" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TSKit.Storage.xcodeproj/TSKit_StorageTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TSKit.StorageTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_198" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_199",
+            "OBJ_200"
+         );
+      };
+      "OBJ_199" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_24";
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXFileReference";
+         path = "UbiquitousStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_200" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_201" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_202",
+            "OBJ_203"
+         );
+      };
+      "OBJ_202" = {
+         isa = "PBXBuildFile";
+         fileRef = "TSKit.Storage::TSKit.Storage::Product";
+      };
+      "OBJ_203" = {
+         isa = "PBXBuildFile";
+         fileRef = "TSKit.Core::TSKit.Core::Product";
+      };
+      "OBJ_204" = {
+         isa = "PBXTargetDependency";
+         target = "TSKit.Storage::TSKit.Storage";
+      };
+      "OBJ_205" = {
+         isa = "PBXTargetDependency";
+         target = "TSKit.Core::TSKit.Core";
+      };
+      "OBJ_21" = {
+         isa = "PBXFileReference";
+         path = "UserDefaultsStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_22" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_23"
+         );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_23" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_24",
+            "OBJ_25"
+         );
+         name = "TSKit.StorageTests";
+         path = "Tests/TSKit.StorageTests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_24" = {
+         isa = "PBXFileReference";
+         path = "KeychainStorageTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "TypedStorageTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_26" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_27"
+         );
+         name = "Dependencies";
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_27" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_28",
+            "OBJ_90"
+         );
+         name = "TSKit.Core 2.3.0";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_28" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_29",
+            "OBJ_30",
+            "OBJ_33",
+            "OBJ_34",
+            "OBJ_81",
+            "OBJ_82",
+            "OBJ_83",
+            "OBJ_84",
+            "OBJ_89"
+         );
+         name = "TSKit.Core";
+         path = ".build/checkouts/TSKit.Core/Sources/TSKit.Core";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "Chaining.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_31",
+            "OBJ_32"
+         );
+         name = "Coding";
+         path = "Coding";
+         sourceTree = "<group>";
+      };
+      "OBJ_31" = {
+         isa = "PBXFileReference";
+         path = "DictionaryDecoder.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_32" = {
+         isa = "PBXFileReference";
+         path = "DictionaryEncoder.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_33" = {
+         isa = "PBXFileReference";
+         path = "Configurable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_34" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_35",
+            "OBJ_50",
+            "OBJ_52",
+            "OBJ_57",
+            "OBJ_60",
+            "OBJ_63",
+            "OBJ_70",
+            "OBJ_74",
+            "OBJ_76",
+            "OBJ_77",
+            "OBJ_78"
+         );
+         name = "Extensions";
+         path = "Extensions";
+         sourceTree = "<group>";
+      };
+      "OBJ_35" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_36",
+            "OBJ_37",
+            "OBJ_38",
+            "OBJ_39",
+            "OBJ_40",
+            "OBJ_41",
+            "OBJ_42",
+            "OBJ_43",
+            "OBJ_44",
+            "OBJ_45",
+            "OBJ_46",
+            "OBJ_47",
+            "OBJ_48",
+            "OBJ_49"
+         );
+         name = "Collections";
+         path = "Collections";
+         sourceTree = "<group>";
+      };
+      "OBJ_36" = {
+         isa = "PBXFileReference";
+         path = "Array+Joining.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_37" = {
+         isa = "PBXFileReference";
+         path = "Array+Movable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "Array+Mutable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "BidirectionalCollection+Indices.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_40" = {
+         isa = "PBXFileReference";
+         path = "BidirectionalCollection+Last.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_41" = {
+         isa = "PBXFileReference";
+         path = "Collection+Empty.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_42" = {
+         isa = "PBXFileReference";
+         path = "Collection+Ordering.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_43" = {
+         isa = "PBXFileReference";
+         path = "Dictionary+Filtering.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_44" = {
+         isa = "PBXFileReference";
+         path = "Dictionary+Mapping.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_45" = {
+         isa = "PBXFileReference";
+         path = "Sequence+Distinct.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_46" = {
+         isa = "PBXFileReference";
+         path = "Sequence+Filtering.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_47" = {
+         isa = "PBXFileReference";
+         path = "Sequence+Grouping.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_48" = {
+         isa = "PBXFileReference";
+         path = "Sequence+Random.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_49" = {
+         isa = "PBXFileReference";
+         path = "Set+Filtering.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_22",
+            "OBJ_26",
+            "OBJ_91",
+            "OBJ_95",
+            "OBJ_96",
+            "OBJ_97",
+            "OBJ_98",
+            "OBJ_99",
+            "OBJ_100"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_51"
+         );
+         name = "Data";
+         path = "Data";
+         sourceTree = "<group>";
+      };
+      "OBJ_51" = {
+         isa = "PBXFileReference";
+         path = "Data+DataSize.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_52" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_53",
+            "OBJ_54",
+            "OBJ_55",
+            "OBJ_56"
+         );
+         name = "Date";
+         path = "Date";
+         sourceTree = "<group>";
+      };
+      "OBJ_53" = {
+         isa = "PBXFileReference";
+         path = "Date+Comparison.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_54" = {
+         isa = "PBXFileReference";
+         path = "Date+Components.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_55" = {
+         isa = "PBXFileReference";
+         path = "Date+Format.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_56" = {
+         isa = "PBXFileReference";
+         path = "Date+Weekdays.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_57" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_58",
+            "OBJ_59"
+         );
+         name = "Dispatch";
+         path = "Dispatch";
+         sourceTree = "<group>";
+      };
+      "OBJ_58" = {
+         isa = "PBXFileReference";
+         path = "DispatchQueue+Main.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_59" = {
+         isa = "PBXFileReference";
+         path = "DispatchSemaphore+Lock.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_61",
+            "OBJ_62"
+         );
+         name = "Numeric";
+         path = "Numeric";
+         sourceTree = "<group>";
+      };
+      "OBJ_61" = {
+         isa = "PBXFileReference";
+         path = "BinaryFloatingPoint+Rounded.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_62" = {
+         isa = "PBXFileReference";
+         path = "Numeric+Empty.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_63" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_64",
+            "OBJ_65",
+            "OBJ_66",
+            "OBJ_67",
+            "OBJ_68",
+            "OBJ_69"
+         );
+         name = "String";
+         path = "String";
+         sourceTree = "<group>";
+      };
+      "OBJ_64" = {
+         isa = "PBXFileReference";
+         path = "String+CGSize.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_65" = {
+         isa = "PBXFileReference";
+         path = "String+Empty.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_66" = {
+         isa = "PBXFileReference";
+         path = "String+HTML.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_67" = {
+         isa = "PBXFileReference";
+         path = "String+JSON.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_68" = {
+         isa = "PBXFileReference";
+         path = "String+NSRange.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_69" = {
+         isa = "PBXFileReference";
+         path = "String+Regex.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8"
+         );
+         name = "Sources";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_70" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_71",
+            "OBJ_72",
+            "OBJ_73"
+         );
+         name = "UIColor";
+         path = "UIColor";
+         sourceTree = "<group>";
+      };
+      "OBJ_71" = {
+         isa = "PBXFileReference";
+         path = "UIColor+Brightness.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_72" = {
+         isa = "PBXFileReference";
+         path = "UIColor+Random.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_73" = {
+         isa = "PBXFileReference";
+         path = "UIColor+UInt8.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_74" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_75"
+         );
+         name = "UIImage";
+         path = "UIImage";
+         sourceTree = "<group>";
+      };
+      "OBJ_75" = {
+         isa = "PBXFileReference";
+         path = "UIImage+GIF.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_76" = {
+         isa = "PBXFileReference";
+         path = "UIImagePickerControllerSourceType+SupportedMediaTypes.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_77" = {
+         isa = "PBXFileReference";
+         path = "UInt+String.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_78" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_79",
+            "OBJ_80"
+         );
+         name = "URL";
+         path = "URL";
+         sourceTree = "<group>";
+      };
+      "OBJ_79" = {
+         isa = "PBXFileReference";
+         path = "URL+MimeType.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9",
+            "OBJ_10",
+            "OBJ_11",
+            "OBJ_12",
+            "OBJ_13",
+            "OBJ_14",
+            "OBJ_15",
+            "OBJ_16",
+            "OBJ_17",
+            "OBJ_18",
+            "OBJ_19",
+            "OBJ_20",
+            "OBJ_21"
+         );
+         name = "TSKit.Storage";
+         path = "Sources/TSKit.Storage";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_80" = {
+         isa = "PBXFileReference";
+         path = "URL+Relative.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_81" = {
+         isa = "PBXFileReference";
+         path = "Identifiable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_82" = {
+         isa = "PBXFileReference";
+         path = "ImageMetaReader.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_83" = {
+         isa = "PBXFileReference";
+         path = "Result.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_84" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_85",
+            "OBJ_86",
+            "OBJ_87",
+            "OBJ_88"
+         );
+         name = "Structs";
+         path = "Structs";
+         sourceTree = "<group>";
+      };
+      "OBJ_85" = {
+         isa = "PBXFileReference";
+         path = "DataSize.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_86" = {
+         isa = "PBXFileReference";
+         path = "ShadedColor.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_87" = {
+         isa = "PBXFileReference";
+         path = "Time.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_88" = {
+         isa = "PBXFileReference";
+         path = "Weak.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_89" = {
+         isa = "PBXFileReference";
+         path = "Transformation.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_9" = {
+         isa = "PBXFileReference";
+         path = "AnyDynamicStorage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_90" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/adya/Projects/TSKit/TSKit.Storage/.build/checkouts/TSKit.Core/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_91" = {
+         isa = "PBXGroup";
+         children = (
+            "TSKit.Storage::TSKit.Storage::Product",
+            "TSKit.Storage::TSKit.StorageTests::Product",
+            "TSKit.Core::TSKit.Core::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_95" = {
+         isa = "PBXFileReference";
+         path = "Carthage";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_96" = {
+         isa = "PBXFileReference";
+         path = "Keychain Host";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_97" = {
+         isa = "PBXFileReference";
+         path = "Cartfile.resolved";
+         sourceTree = "<group>";
+      };
+      "OBJ_98" = {
+         isa = "PBXFileReference";
+         path = "LICENSE.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_99" = {
+         isa = "PBXFileReference";
+         path = "Cartfile";
+         sourceTree = "<group>";
+      };
+      "TSKit.Core::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_157";
+         buildPhases = (
+            "OBJ_160"
+         );
+         dependencies = (
+         );
+         name = "TSKit.CorePackageDescription";
+         productName = "TSKit.CorePackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "TSKit.Core::TSKit.Core" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_102";
+         buildPhases = (
+            "OBJ_105",
+            "OBJ_155"
+         );
+         dependencies = (
+         );
+         name = "TSKit.Core";
+         productName = "TSKit_Core";
+         productReference = "TSKit.Core::TSKit.Core::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "TSKit.Core::TSKit.Core::Product" = {
+         isa = "PBXFileReference";
+         path = "TSKit_Core.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "TSKit.Storage::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_184";
+         buildPhases = (
+            "OBJ_187"
+         );
+         dependencies = (
+         );
+         name = "TSKit.StoragePackageDescription";
+         productName = "TSKit.StoragePackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "TSKit.Storage::TSKit.Storage" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_163";
+         buildPhases = (
+            "OBJ_166",
+            "OBJ_180"
+         );
+         dependencies = (
+            "OBJ_182"
+         );
+         name = "TSKit.Storage";
+         productName = "TSKit_Storage";
+         productReference = "TSKit.Storage::TSKit.Storage::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "TSKit.Storage::TSKit.Storage::Product" = {
+         isa = "PBXFileReference";
+         path = "TSKit_Storage.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "TSKit.Storage::TSKit.StoragePackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_190";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_193"
+         );
+         name = "TSKit.StoragePackageTests";
+         productName = "TSKit.StoragePackageTests";
+      };
+      "TSKit.Storage::TSKit.StorageTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_195";
+         buildPhases = (
+            "OBJ_198",
+            "OBJ_201"
+         );
+         dependencies = (
+            "OBJ_204",
+            "OBJ_205"
+         );
+         name = "TSKit.StorageTests";
+         productName = "TSKit_StorageTests";
+         productReference = "TSKit.Storage::TSKit.StorageTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "TSKit.Storage::TSKit.StorageTests::Product" = {
+         isa = "PBXFileReference";
+         path = "TSKit_StorageTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+   };
+   rootObject = "OBJ_1";
 }
