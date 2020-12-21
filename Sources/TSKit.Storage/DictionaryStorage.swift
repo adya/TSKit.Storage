@@ -7,6 +7,8 @@ public class DictionaryStorage : AnyDynamicStorage {
     
     private var storage = [String : Any]()
     
+    public init() {}
+    
     public func value(forKey key: String) -> Any? {
         return storage[key]
     }

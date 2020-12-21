@@ -28,17 +28,11 @@ public class PlistStorage : AnyReadableDynamicStorage {
         plist = result
     }
    
-    public func value(forKey key: String) -> Any? {
-        return plist[key]
-    }
+    public func value(forKey key: String) -> Any? { plist[key] }
     
-    public var count: Int {
-        return plist.count
-    }
+    public var count: Int { plist.count }
     
-    public var dictionary: [String : Any] {
-        return plist
-    }
+    public var dictionary: [String : Any] { plist }
     
     private static func log(error : StorageError) {
         let msg : String

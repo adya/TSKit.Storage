@@ -9,7 +9,17 @@ import Foundation
 @available(iOS 8.0, *)
 public class UbiquitousStorage : AnyDynamicStorage {
 
-    private var storage = NSUbiquitousKeyValueStore.default
+    private let storage: NSUbiquitousKeyValueStore
+    
+    /// Initializes storage with `NSUbiquitousKeyValueStore.default` instance to be used internally.
+    public convenience init() {
+        self.init(ubiquitous: .default)
+    }
+    
+    /// Initializes storage with provided `ubiquitous` instance to be used internally.
+    public init(ubiquitous: NSUbiquitousKeyValueStore) {
+        self.storage = ubiquitous
+    }
     
     public func value(forKey key: String) -> Any? {
         return storage.value(forKey: key)

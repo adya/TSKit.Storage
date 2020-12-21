@@ -9,7 +9,17 @@ import Foundation
 @available(iOS 8, *)
 public class UserDefaultsStorage : AnyDynamicStorage {
     
-    private var storage = UserDefaults.standard
+    private let storage: UserDefaults
+    
+    /// Initializes storage with `UserDefaults.standard`.
+    public convenience init() {
+        self.init(userDefaults: .standard)
+    }
+    
+    /// Initializes storage with provided `userDefaults` instance.
+    public init(userDefaults: UserDefaults) {
+        self.storage = userDefaults
+    }
     
     public func value(forKey key: String) -> Any? {
         return storage.value(forKey: key)
