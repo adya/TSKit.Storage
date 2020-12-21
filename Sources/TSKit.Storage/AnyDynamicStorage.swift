@@ -3,8 +3,10 @@
 // - Copyright: © 2020. Arkadii Hlushchevskyi.
 // - Seealso: https://github.com/adya/TSKit.Storage/blob/master/LICENSE.md
 
+import Foundation
+
 /// Represents a common way to access (read/write) values in storages of any kind.
-public protocol AnyDynamicStorage : AnyStorage, AnyReadableDynamicStorage {
+public protocol AnyDynamicStorage : AnyTypedStorage, AnyReadableDynamicStorage {
     
     /// Gets or sets value for given `key`.
     /// - Note: Passing `nil` is equivalent to `removeValue(for:)`
@@ -49,5 +51,41 @@ public extension AnyDynamicStorage {
                 removeValue(forKey: key)
             }
         }
+    }
+}
+
+// MARK: - Typed support for dynamic storages
+public extension AnyDynamicStorage {
+    
+    func set(_ value: String, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: Int, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: Decimal, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: Double, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: Float, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: Bool, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: NSNumber, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
+    }
+    
+    func set(_ value: Data, forKey key: String) -> Bool {
+        set(value as Any, forKey: key)
     }
 }

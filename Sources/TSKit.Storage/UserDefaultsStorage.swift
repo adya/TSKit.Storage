@@ -30,6 +30,11 @@ public class UserDefaultsStorage : AnyDynamicStorage {
         return true
     }
     
+    // Custom implemented decimal getter due to bridging issues.
+    public func decimalValue(forKey key: String) -> Decimal? {
+        (value(forKey: key) as? NSNumber)?.decimalValue
+    }
+    
     public func removeValue(forKey key: String) -> Bool {
         storage.removeObject(forKey: key)
         return true
