@@ -12,20 +12,28 @@ import TSKit_Core
 public class KeychainStorage : AnyTypedStorage {
     
     /// Identifier of the service that is attempting access to keychain.
+    ///
     /// Defaults to `Bundle.main.bundleIdentifier` of the application iff it is available, otherwise to `"KeychainStorage"`.
     /// - Important: This identifier should be the same across whole application to ensure that all keys stored through this storage are accessible.
     /// - Note: [kSecAttrService](https://developer.apple.com/documentation/security/ksecattrservice)
     public let identifier: String
     
     /// Identifier for `Keychain Access Group` which this storage have access to.
+    ///
     /// Access groups are used when multiple apps from the same vendor need to share keychain items.
     /// - Important: Requries enabling `Keychaing Sharing` capability in the host application.
     /// - Note: [kSecAttrAccessGroup](https://developer.apple.com/documentation/security/ksecattraccessgroup)
     public let accessGroup: String?
     
     /// Accessibility level that indicates when a keychain item is accessible.
+    ///
+    /// Defaults to `.whenUnlocked`.
     /// - Note: [kSecAttrAccessible](https://developer.apple.com/documentation/security/ksecattraccessible)
     public let accessibility: Accessibility
+    
+    /// Last captured error occurred when trying to access keychain.
+    /// Useful for debugging.
+    private(set) public var error: AccessError?
     
     public var count: Int {
         getAll().count
@@ -157,8 +165,10 @@ private extension KeychainStorage {
     }
     
     func update(_ value: Data, forKey key: String) -> Bool {
-        SecItemUpdate(query(forKey: key) as CFDictionary,
-                      [kSecValueData: value] as CFDictionary) == errSecSuccess
+        captureError {
+            SecItemUpdate(query(forKey: key) as CFDictionary,
+                          [kSecValueData: value] as CFDictionary)
+        } == errSecSuccess
     }
     
     func add(_ value: Data, forKey key: String) -> Bool {
@@ -166,7 +176,7 @@ private extension KeychainStorage {
             $0[kSecValueData] = value
         }
         var res: AnyObject?
-        switch SecItemAdd(query as CFDictionary, &res) {
+        switch captureError({ SecItemAdd(query as CFDictionary, &res) }) {
             case errSecSuccess: return true
             case errSecDuplicateItem: return update(value, forKey: key)
             default: return false
@@ -182,17 +192,17 @@ private extension KeychainStorage {
             $0[kSecReturnData] = kCFBooleanTrue
         }
         var result: AnyObject?
-        guard SecItemCopyMatching(query as CFDictionary, &result) == errSecSuccess else { return nil }
+        guard captureError({ SecItemCopyMatching(query as CFDictionary, &result) }) == errSecSuccess else { return nil }
         
         return result as? Data
     }
     
     func deleteValue(forKey key: String) -> Bool {
-        SecItemDelete(query(forKey: key) as CFDictionary) == errSecSuccess
+        captureError { SecItemDelete(query(forKey: key) as CFDictionary) } == errSecSuccess
     }
     
     func deleteAll() -> Bool {
-        SecItemDelete(defaultQuery as CFDictionary) == errSecSuccess
+        captureError { SecItemDelete(defaultQuery as CFDictionary) } == errSecSuccess
     }
     
     func getAll() -> [String: Data] {
@@ -202,15 +212,28 @@ private extension KeychainStorage {
             $0[kSecReturnRef] = kCFBooleanTrue
         }
         var result: AnyObject?
-        guard SecItemCopyMatching(query as CFDictionary, &result) == errSecSuccess,
+        guard captureError({ SecItemCopyMatching(query as CFDictionary, &result) }) == errSecSuccess,
             let items = result as? [[CFString: Any]] else { return [:] }
         
         return items.compactMap(key: { $0[kSecAttrAccount] as? String },
                                 value: { $0[kSecValueData] as? Data })
         
     }
+    
+    private func captureError(_ closure: () -> OSStatus) -> OSStatus {
+        let status = closure()
+        if status != errSecSuccess {
+            if #available(iOS 11.3, *) {
+                error = .init(code: status, message: SecCopyErrorMessageString(status, nil) as String?)
+            } else {
+                error = .init(code: status, message: nil)
+            }
+        }
+        return status
+    }
 }
 
+// MARK: - Accessibility
 public extension KeychainStorage {
     
     /// Accessibility level that indicates when a keychain item is accessible.
@@ -296,5 +319,21 @@ public extension KeychainStorage {
                 case .afterFirstUnlockThisDeviceOnly: return kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
             }
         }
+    }
+}
+
+// MARK: - AccessError
+public extension KeychainStorage {
+    
+    /// Captured error occurred when trying to access keychain.
+    /// Useful for debugging.
+    struct AccessError: Error {
+        
+        /// `OSStatus` code of the error.
+        public let code: OSStatus
+        
+        /// Message retrieved using `SecCopyErrorMessageString` method with corresponding status code.
+        /// - Attention: Prior to **iOS 11.3** `message` will always be `nil`
+        public let message: String?
     }
 }
