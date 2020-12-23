@@ -10,22 +10,32 @@ import TSKit_Core
 
 /// `Keychain` storage data source.
 public class KeychainStorage : AnyTypedStorage {
-   
-    /// Identifier of the service that is attempting access to Keychain.
+    
+    /// Identifier of the service that is attempting access to keychain.
+    /// Defaults to `Bundle.main.bundleIdentifier` of the application iff it is available, otherwise to `"KeychainStorage"`.
     /// - Important: This identifier should be the same across whole application to ensure that all keys stored through this storage are accessible.
     /// - Note: [kSecAttrService](https://developer.apple.com/documentation/security/ksecattrservice)
     public let identifier: String
     
     /// Identifier for `Keychain Access Group` which this storage have access to.
+    /// Access groups are used when multiple apps from the same vendor need to share keychain items.
+    /// - Important: Requries enabling `Keychaing Sharing` capability in the host application.
     /// - Note: [kSecAttrAccessGroup](https://developer.apple.com/documentation/security/ksecattraccessgroup)
     public let accessGroup: String?
+    
+    /// Accessibility level that indicates when a keychain item is accessible.
+    /// - Note: [kSecAttrAccessible](https://developer.apple.com/documentation/security/ksecattraccessible)
+    public let accessibility: Accessibility
     
     public var count: Int {
         getAll().count
     }
     
-    public init(identifier: String? = nil, accessGroup: String? = nil) {
+    public init(identifier: String? = nil,
+                accessibility: Accessibility = .whenUnlocked,
+                accessGroup: String? = nil) {
         self.identifier = identifier ?? Bundle.main.bundleIdentifier ?? String(describing: KeychainStorage.self)
+        self.accessibility = accessibility
         self.accessGroup = accessGroup
     }
     
@@ -130,7 +140,8 @@ private extension KeychainStorage {
     
     var defaultQuery: [CFString: Any] {
         transform([kSecClass: kSecClassGenericPassword,
-                   kSecAttrService: identifier
+                   kSecAttrService: identifier,
+                   kSecAttrAccessible: accessibility.value
         ]) {
             if let group = accessGroup {
                 $0[kSecAttrAccessGroup] = group
@@ -197,5 +208,93 @@ private extension KeychainStorage {
         return items.compactMap(key: { $0[kSecAttrAccount] as? String },
                                 value: { $0[kSecValueData] as? Data })
         
+    }
+}
+
+public extension KeychainStorage {
+    
+    /// Accessibility level that indicates when a keychain item is accessible.
+    /// - Note: [kSecAttrAccessible](https://developer.apple.com/documentation/security/ksecattraccessible)
+    enum Accessibility {
+        
+        /// The data in the keychain item can always be accessed regardless of whether the device is locked.
+        ///
+        /// **This is not recommended for application use.**
+        /// - Important:
+        ///     - Items with this attribute migrate to a new device when using encrypted backups.
+        /// - Note: [kSecAttrAccessibleAlways](https://developer.apple.com/documentation/security/kSecAttrAccessibleAlways)
+        @available(iOS, introduced: 4.0, deprecated: 12.0, message: "Use an accessibility level that provides some user protection, such as afterFirstUnlock")
+        case always
+        
+        /// The data in the keychain item can always be accessed regardless of whether the device is locked.
+        ///
+        /// **This is not recommended for application use.**
+        /// - Important:
+        ///     - Items with this attribute never migrate to a new device.
+        ///     - After a backup is restored to a new device, these items are missing.
+        /// - Note: [kSecAttrAccessibleAlwaysThisDeviceOnly](https://developer.apple.com/documentation/security/kSecAttrAccessibleAlwaysThisDeviceOnly)
+        @available(iOS, introduced: 4.0, deprecated: 12.0, message: "Use an accessibility level that provides some user protection, such as afterFirstUnlockThisDeviceOnly")
+        case alwaysThisDeviceOnly
+        
+        /// The data in the keychain item cannot be accessed after a restart until the device has been unlocked once by the user.
+        ///
+        /// After the first unlock, the data remains accessible until the next restart.
+        /// This is recommended for items that need to be accessed by background applications.
+        /// - Important:
+        ///     - Items with this attribute migrate to a new device when using encrypted backups.
+        /// - Note: [kSecAttrAccessibleAfterFirstUnlock](https://developer.apple.com/documentation/security/kSecAttrAccessibleAfterFirstUnlock)
+        case afterFirstUnlock
+        
+        /// The data in the keychain item cannot be accessed after a restart until the device has been unlocked once by the user.
+        ///
+        /// After the first unlock, the data remains accessible until the next restart.
+        /// This is recommended for items that need to be accessed by background applications.
+        /// - Important:
+        ///     - Items with this attribute never migrate to a new device.
+        ///     - After a backup is restored to a new device, these items are missing.
+        /// - Note: [kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly](https://developer.apple.com/documentation/security/kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly)
+        case afterFirstUnlockThisDeviceOnly
+        
+        /// The data in the keychain item can be accessed only while the device is unlocked by the user.
+        /// This is the default value for keychain items added without explicitly setting an accessibility constant.
+        ///
+        /// This is recommended for items that need to be accessible only while the application is in the foreground.
+        /// - Important:
+        ///     - Items with this attribute migrate to a new device when using encrypted backups.
+        /// - Note: [kSecAttrAccessibleWhenUnlocked](https://developer.apple.com/documentation/security/kSecAttrAccessibleWhenUnlocked)
+        case whenUnlocked
+        
+        /// The data in the keychain item can be accessed only while the device is unlocked by the user.
+        ///
+        /// This is recommended for items that need to be accessible only while the application is in the foreground.
+        /// - Important:
+        ///     - Items with this attribute never migrate to a new device.
+        ///     - After a backup is restored to a new device, these items are missing.
+        /// - Note: [kSecAttrAccessibleWhenUnlockedThisDeviceOnly](https://developer.apple.com/documentation/security/kSecAttrAccessibleWhenUnlockedThisDeviceOnly)
+        case whenUnlockedThisDeviceOnly
+        
+        /// The data in the keychain can only be accessed when the device is unlocked.
+        /// **Only available if a passcode is set on the device**.
+        ///
+        /// This is recommended for items that only need to be accessible while the application is in the foreground.
+        /// - Important:
+        ///     - Items with this attribute never migrate to a new device.
+        ///     - After a backup is restored to a new device, these items are missing.
+        ///     - No items can be stored in this class on devices without a passcode.
+        /// - Attention: Disabling the device passcode causes all items in this class to be deleted.
+        /// - Note: [kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly](https://developer.apple.com/documentation/security/kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly)
+        case whenPasscodeSetThisDeviceOnly
+        
+        var value: CFString {
+            switch self {
+                case .always: return kSecAttrAccessibleAlways
+                case .whenUnlocked: return kSecAttrAccessibleWhenUnlocked
+                case .afterFirstUnlock: return kSecAttrAccessibleAfterFirstUnlock
+                case .alwaysThisDeviceOnly: return kSecAttrAccessibleAlwaysThisDeviceOnly
+                case .whenUnlockedThisDeviceOnly: return kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+                case .whenPasscodeSetThisDeviceOnly: return kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
+                case .afterFirstUnlockThisDeviceOnly: return kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+            }
+        }
     }
 }
