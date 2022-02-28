@@ -25,6 +25,6 @@ public enum Storage {
     
     /// Plist storages. Read-only storages. Persistent for app build.
     public static func plist(named: String) -> AnyReadableDynamicStorage? {
-        PlistStorage(plistName: named)
+        try? PlistStorage(named: named)
     }
 }

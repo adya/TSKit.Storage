@@ -23,6 +23,11 @@ public protocol AnyDynamicStorage : AnyTypedStorage, AnyReadableDynamicStorage {
     @discardableResult
     func set(_ value: Any, forKey key: String) -> Bool
     
+    /// Sets all values containing in the `given` dictionary to the storage.
+    ///
+    /// If storage already contains value for a key present in the `dictionary`
+    /// the value is overwritten by the `dictionary`.
+    func setValues(from dictionary: [String: Any])
 }
 
 // MARK: - Pop values add-on
@@ -42,7 +47,7 @@ public extension AnyDynamicStorage {
     
     subscript(key : String) -> Any? {
         get {
-            return value(forKey: key)
+            value(forKey: key)
         }
         set {
             if let newValue = newValue {
@@ -57,35 +62,52 @@ public extension AnyDynamicStorage {
 // MARK: - Typed support for dynamic storages
 public extension AnyDynamicStorage {
     
+    @discardableResult
     func set(_ value: String, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: Int, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: Decimal, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: Double, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: Float, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: Bool, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: NSNumber, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
     }
     
+    @discardableResult
     func set(_ value: Data, forKey key: String) -> Bool {
         set(value as Any, forKey: key)
+    }
+}
+
+public extension AnyDynamicStorage {
+    
+    func setValues(from dictionary: [String: Any]) {
+        dictionary.forEach { key, value in
+            set(value, forKey: key)
+        }
     }
 }

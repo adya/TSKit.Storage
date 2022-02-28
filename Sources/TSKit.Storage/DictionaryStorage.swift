@@ -5,7 +5,7 @@
 
 import Foundation
 
-public class DictionaryStorage : AnyDynamicStorage, AnyTypedStorage {
+public class DictionaryStorage : AnyDynamicStorage {
     
     private var storage = [String : Any]()
     

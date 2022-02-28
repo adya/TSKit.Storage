@@ -11,13 +11,10 @@ public class UserDefaultsStorage : AnyDynamicStorage {
     
     private let storage: UserDefaults
     
-    /// Initializes storage with `UserDefaults.standard`.
-    public convenience init() {
-        self.init(userDefaults: .standard)
-    }
-    
     /// Initializes storage with provided `userDefaults` instance.
-    public init(userDefaults: UserDefaults) {
+    ///
+    /// Defaults to `.standard`.
+    public init(userDefaults: UserDefaults = .standard) {
         self.storage = userDefaults
     }
     
