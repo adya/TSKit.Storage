@@ -12,7 +12,7 @@ let package = Package(
             targets: ["TSKit.Storage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/adya/TSKit.Core.git", .upToNextMajor(from: "2.3.0")),
+        .package(url: "https://github.com/adya/TSKit.Core.git", .upToNextMajor(from: "2.12.0")),
     ],
     targets: [
         .target(
