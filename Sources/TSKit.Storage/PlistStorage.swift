@@ -18,6 +18,7 @@ import TSKit_Core
 ///              so avoid using multiple instances of `PlistStorage` with the same backing storage file.
 public class PlistStorage: AnyDynamicStorage {
 
+    @Synchronized
     private var plist: [String: Any] = [:]
     
     private let plistPath: URL
